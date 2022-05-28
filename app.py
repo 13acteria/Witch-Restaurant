@@ -26,4 +26,5 @@ def get_arg():
     arg1, arg2 = int(arg1), int(arg2)
     return 'sum: '+str(arg1+arg2)
 
-app.run()
+if __name__ == '__main__':
+    app.run()
