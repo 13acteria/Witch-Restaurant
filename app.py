@@ -26,4 +26,4 @@ def get_arg():
     arg1, arg2 = int(arg1), int(arg2)
     return 'sum: '+str(arg1+arg2)
 
-app.run(port=4000)
+app.run()
