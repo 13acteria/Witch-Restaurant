@@ -1,7 +1,7 @@
 from flask import Flask
 from flask import request
 from flask import render_template
-
+#hi
 app = Flask(
     __name__,
     static_folder='gallery',
