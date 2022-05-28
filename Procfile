@@ -1,0 +1,1 @@
+web: gunicorn little-witch:app –log-file -
