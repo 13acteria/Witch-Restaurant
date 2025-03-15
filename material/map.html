@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <style type="text/css" media="screen">
+        
+        #map {
+            position: relative;
+            top: 15%;
+            left: 5%;
+            height: 75%;
+            width: 65vw;
+        }
+
+        .body {
+            height: 100%;
+            width: 100vw;
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+  <form action="/">
+    <input type="text" name="d" />
+    <button>送出</button>
+  </form>
+  <div class="body">
+        <div id="map"></div>
+  </div>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiDz6zKepKyIrKlfFeYYagsapLT1Xa7qw&callback=initMap" ></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script>
+
+    function initMap() {
+      var map = new google.maps.Map(document.getElementById("map") , {
+        center: { lat: 25.046891, lng: 121.516602 },//中心位置
+        zoom: 14,
+      });
+      //--------下面是呼叫一個新marker------
+      var marker = new google.maps.Marker({
+        position: { lat: 25.046891, lng: 121.516602 }, //marker的放置位置
+        map: map //這邊的map指的是第3行的map變數
+      });
+    }
+    
+
+
+
+  </script>
+</body>
+</html>
